@@ -1,0 +1,121 @@
+:root {
+  --navy: #16174a;
+  --wall: #2b2f77;
+  --paper: #fff04d;
+  --fiber: #fffbd6;
+  --pink: #ff4f9a;
+  --display: 'Dela Gothic One', Impact, sans-serif;
+  --mono: 'Space Mono', 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--wall);
+  color: var(--navy);
+  font-family: var(--mono);
+}
+
+a { color: var(--navy); }
+a:hover { color: #d11c6c; }
+
+.wall {
+  min-height: 100vh;
+  padding: 72px 32px 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  transform: rotate(-0.5deg);
+  filter: drop-shadow(8px 10px 0 rgba(8, 9, 40, 0.5));
+}
+
+.staple { position: absolute; top: 14px; z-index: 2; }
+.staple-left { left: 20px; transform: rotate(-8deg); }
+.staple-right { right: 20px; transform: rotate(6deg); }
+
+.paper { background: var(--paper); padding: 48px 48px 36px; }
+
+h1 {
+  margin: 30px 0 0;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(56px, 14vw, 128px);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 6px 5px 0 var(--pink);
+}
+
+.intro {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-end;
+}
+
+.intro p {
+  flex: 1 1 340px;
+  margin: 0;
+  max-width: 472px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.skyline { position: relative; flex: 0 0 300px; height: 150px; }
+.skyline span { position: absolute; background: var(--wall); }
+.skyline .sun { left: 150px; top: 0; width: 110px; height: 110px; border-radius: 50%; background: var(--pink); mix-blend-mode: multiply; }
+.skyline .b1 { left: 0; bottom: 0; width: 70px; height: 100px; }
+.skyline .b2 { left: 60px; bottom: 0; width: 90px; height: 140px; mix-blend-mode: multiply; }
+.skyline .b3 { left: 150px; bottom: 0; width: 60px; height: 80px; }
+.skyline .b4 { left: 200px; bottom: 0; width: 100px; height: 120px; mix-blend-mode: multiply; }
+
+/* Tear-off tabs: each slot is its own piece of paper. Torn ones leave a ragged stub and a gap. */
+.tabs { display: flex; align-items: flex-start; }
+
+.slot {
+  flex: 1 1 0;
+  min-width: 0;
+  border-top: 2px dashed var(--navy);
+  border-left: 1px solid var(--navy);
+}
+.tabs::after { content: ''; align-self: stretch; border-left: 1px solid var(--navy); }
+
+.tab {
+  display: block;
+  width: 100%;
+  min-width: 44px;
+  height: 200px;
+  padding: 14px 0;
+  background: var(--paper);
+  color: var(--navy);
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.tab:hover { background: var(--pink); color: var(--navy); }
+.tab:focus-visible { outline: 3px solid var(--navy); outline-offset: -3px; }
+
+.stub { position: relative; width: 100%; background: var(--fiber); }
+.stub i { position: absolute; inset: 0; background: var(--paper); }
+
+.target { height: 0; }
+
+@media (max-width: 600px) {
+  .wall { padding: 40px 16px 56px; }
+  .paper { padding: 36px 24px 28px; }
+  .skyline { flex-basis: 100%; }
+  .tab { font-size: 14px; }
+}
