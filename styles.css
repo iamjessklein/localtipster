@@ -237,3 +237,9 @@ h1 span { font-size: 13cqw; }
 
 /* lowercase headline */
 .title span { text-transform: lowercase; font-family: 'Mansalva', 'Bradley Hand', cursive; }
+
+/* each word centered on its own shape */
+.title { top: 0; left: 0; width: 100%; height: 100%; }
+.title span { position: absolute; display: block; text-align: center; margin: 0; line-height: 1; }
+.title .loc { left: 23%; width: 51%; top: 30%; transform: translateY(-50%) rotate(-5deg); }
+.title .tip { left: 21%; width: 53%; top: 61%; transform: translateY(-50%) rotate(-2.5deg); }
