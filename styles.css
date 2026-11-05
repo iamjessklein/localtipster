@@ -228,3 +228,9 @@ h1 span { font-size: 9.6cqw; }
 h1 span, .tip { font-family: var(--hand); -webkit-text-stroke: 0.025em currentColor; letter-spacing: 0.02em; }
 h1 span { font-size: 13cqw; }
 .tip { font-size: 10cqw; }
+
+/* headline sits on top of the shapes (not inside them) so it can spill past their edges */
+.title { top: 10%; left: 11%; width: 78%; z-index: 5; margin: 0; pointer-events: none; }
+.title span { white-space: nowrap; }
+.title .loc { font-size: 17cqw; margin-left: 12%; transform: rotate(-5deg); }
+.title .tip { font-size: 13.5cqw; margin: -1cqw 0 0 4%; padding: 0; transform: rotate(-2.5deg); }
