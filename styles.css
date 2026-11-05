@@ -171,3 +171,50 @@ body { background-color: #f1e8d3; }
 
 .tip::after { display: none; }
 .tip { padding-bottom: 0; }
+
+/* ---------- newsprint scraps: torn bits of old paper for texture ---------- */
+.scrap {
+  z-index: 0;
+  overflow: hidden;
+  padding: 1cqw 1.1cqw;
+  background-color: #dcd5c0;
+  background-image: var(--grain);
+  color: #3f3b34;
+  font-family: Georgia, 'Times New Roman', serif;
+  mix-blend-mode: multiply;
+  opacity: 0.92;
+  pointer-events: none;
+}
+.scrap h2 {
+  margin: 0 0 .5cqw; padding-bottom: .4cqw;
+  font-size: 1.9cqw; line-height: 1; font-weight: 700; letter-spacing: .02em;
+  border-bottom: 1px solid rgba(63, 59, 52, .6);
+}
+.scrap p { margin: 0; font-size: 1.15cqw; line-height: 1.3; text-align: justify; hyphens: auto; }
+.scrap.dots {
+  background-image: radial-gradient(rgba(63, 59, 52, .28) 28%, transparent 30%), var(--grain);
+  background-size: .7cqw .7cqw, auto;
+}
+
+.s1 { top: 55%; left: -1%; width: 17%; height: 22%; transform: rotate(-6deg);
+  clip-path: polygon(0 4%, 18% 0, 55% 3%, 100% 0, 97% 38%, 100% 70%, 94% 100%, 40% 96%, 3% 100%, 0 60%, 3% 30%); }
+.s2 { top: -3%; left: 57%; width: 18%; height: 16%; transform: rotate(5deg);
+  clip-path: polygon(2% 0, 60% 5%, 100% 0, 96% 50%, 100% 100%, 50% 94%, 0 100%, 4% 48%); }
+.s3 { top: 78%; left: 66%; width: 14%; height: 18%; transform: rotate(-4deg);
+  clip-path: polygon(0 8%, 30% 0, 100% 6%, 94% 55%, 100% 96%, 60% 100%, 8% 94%, 4% 50%); }
+.s4 { top: 43%; left: 71%; width: 14%; height: 18%; transform: rotate(8deg);
+  clip-path: polygon(6% 0, 100% 4%, 95% 52%, 100% 100%, 40% 95%, 0 100%, 4% 46%); }
+.s5 { top: 10%; left: 9%; width: 13%; height: 21%; transform: rotate(-3deg);
+  clip-path: polygon(0 0, 52% 4%, 100% 0, 96% 60%, 100% 100%, 46% 96%, 4% 100%, 0 52%); }
+
+/* uneven scatter: different sizes, some bleeding off the edges, a couple clustered */
+.s1 { top: 61%; left: -5%; width: 25%; height: 31%; transform: rotate(-9deg); }
+.s1 p { font-size: 1.35cqw; }
+.s2 { top: -7%; left: 45%; width: 27%; height: 13%; transform: rotate(2deg); }
+.s3 { top: 71%; left: 41%; width: 11%; height: 15%; transform: rotate(11deg); }
+.s3 h2 { font-size: 1.5cqw; }
+.s3 p { font-size: 1cqw; }
+.s4 { top: 37%; left: 90%; width: 13%; height: 31%; transform: rotate(4deg); }
+.s5 { top: 13%; left: 14%; width: 9%; height: 13%; transform: rotate(7deg); }
+.s5 h2 { font-size: 1.5cqw; }
+.s5 p { font-size: .95cqw; }
