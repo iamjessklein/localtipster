@@ -5,47 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LocalTipster</title>
 <meta name="description" content="A collective for people who design and make things for their local neighborhood.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Mansalva&family=Permanent+Marker&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4"/></filter>
+  <filter id="chalk"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5"/></filter>
+</svg>
 <main class="wall">
   <div class="poster">
-    <svg class="staple staple-left" aria-hidden="true" width="40" height="14" viewBox="0 0 40 14"><path d="M3 4 H37" stroke="#8d8fb5" stroke-width="3.5" stroke-linecap="round"/></svg>
-    <svg class="staple staple-right" aria-hidden="true" width="40" height="14" viewBox="0 0 40 14"><path d="M3 4 H37" stroke="#8d8fb5" stroke-width="3.5" stroke-linecap="round"/></svg>
-
-    <div class="paper">
-      <h1>Local<br>Tipster</h1>
-      <div class="intro">
-        <p>A collective for people who design and make things for their local neighborhood.</p>
-        <div class="skyline" aria-hidden="true">
-          <span class="sun"></span>
-          <span class="b b1"></span>
-          <span class="b b2"></span>
-          <span class="b b3"></span>
-          <span class="b b4"></span>
-        </div>
+    <div class="sheet">
+      <div class="collage">
+        <p class="label">A collective<br>for neighbors</p>
+        <span class="crayon" aria-hidden="true"></span>
+        <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><polygon filter="url(#chalk)" fill="#2745c7" points="50,2 60,32 90,16 72,44 98,58 66,62 70,96 50,72 30,96 34,62 2,58 28,44 10,16 40,32"/></svg>
+        <div class="blob red"><h1><span>Local</span></h1></div>
+        <div class="blob pink"><span class="tip">Tipster</span></div>
+        <a class="dot" href="#projects"><span>projects</span></a>
+        <a class="chip" href="https://www.etsy.com/shop/LocalTipster" target="_blank" rel="noopener"><span>shop</span><b>&#8599;</b></a>
+        <svg class="scribble" viewBox="0 0 120 150" aria-hidden="true"><path filter="url(#chalk)" fill="none" stroke="#ee7fa6" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" d="M30 20 C80 4 108 22 70 36 C20 54 12 70 66 62 C112 56 110 84 60 92 C14 100 14 118 64 112 C100 108 100 134 52 138"/></svg>
+      </div>
+      <div class="lower">
+        <div class="note"><p>A collective for people who design and make things for their local neighborhood.</p></div>
       </div>
     </div>
-
-    <nav class="tabs" aria-label="Sections">
-      <div class="slot"><div class="stub" data-h="58" data-lift="22" data-shape="0.1,0.7,0.3,1,0.5,0.8,0.2" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><div class="stub" data-h="26" data-lift="14" data-shape="0.9,0.5,0.8,0.2,0.6,0.1,0.4" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><a class="tab" href="#projects">Projects</a></div>
-      <div class="slot"><div class="stub" data-h="74" data-lift="40" data-shape="1,0.8,0.5,0.55,0.2,0.3,0" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><div class="stub" data-h="20" data-lift="12" data-shape="0.3,0.9,0.2,0.7,0.1,0.8,0.4" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><a class="tab" href="https://www.etsy.com/shop/LocalTipster" target="_blank" rel="noopener">Shop</a></div>
-      <div class="slot"><div class="stub" data-h="46" data-lift="24" data-shape="0,0.4,0.2,0.8,0.5,1,0.6" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><div class="stub" data-h="14" data-lift="8" data-shape="0.6,0.1,0.9,0.3,0.8,0.2,0.7" aria-hidden="true"><i></i></div></div>
-      <div class="slot"><div class="stub" data-h="66" data-lift="30" data-shape="0.2,1,0.6,0.9,0.3,0.5,0.1" aria-hidden="true"><i></i></div></div>
-    </nav>
   </div>
 
-  <!-- Placeholder target for the Projects tab. Replace with a real section when it is built. -->
+  <!-- Placeholder target for the Projects sticker. Replace with a real section when it is built. -->
   <section id="projects" class="target" aria-label="Projects"></section>
 </main>
-<script src="script.js"></script>
 </body>
 </html>
