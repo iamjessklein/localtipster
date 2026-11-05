@@ -223,3 +223,8 @@ body { background-color: #f1e8d3; }
 h1 span, .tip { -webkit-text-stroke: 0.04em currentColor; paint-order: stroke fill; letter-spacing: 0.01em; }
 h1 span { font-size: 9.6cqw; }
 .tip { font-size: 7.2cqw; }
+
+/* headline in Mansalva */
+h1 span, .tip { font-family: var(--hand); -webkit-text-stroke: 0.025em currentColor; letter-spacing: 0.02em; }
+h1 span { font-size: 13cqw; }
+.tip { font-size: 10cqw; }
