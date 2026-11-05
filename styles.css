@@ -8,7 +8,7 @@
   --yellow: #efc23d;
   --blue: #7aa6d8;
   --royal: #2745c7;
-  --marker: 'Permanent Marker', 'Marker Felt', cursive;
+  --marker: 'Rock Salt', 'Marker Felt', cursive;
   --hand: 'Mansalva', 'Bradley Hand', cursive;
   --mono: 'DM Mono', 'Courier New', monospace;
 
@@ -218,3 +218,8 @@ body { background-color: #f1e8d3; }
 .s5 { top: 13%; left: 14%; width: 9%; height: 13%; transform: rotate(7deg); }
 .s5 h2 { font-size: 1.5cqw; }
 .s5 p { font-size: .95cqw; }
+
+/* Rock Salt only comes in one weight, so the bold is a stroke around each letter */
+h1 span, .tip { -webkit-text-stroke: 0.04em currentColor; paint-order: stroke fill; letter-spacing: 0.01em; }
+h1 span { font-size: 9.6cqw; }
+.tip { font-size: 7.2cqw; }
